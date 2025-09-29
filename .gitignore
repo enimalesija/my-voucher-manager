@@ -1,0 +1,71 @@
+# ------------------------------
+# Dependencies
+# ------------------------------
+node_modules/
+**/node_modules/
+.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# ------------------------------
+# Build outputs
+# ------------------------------
+dist/
+build/
+.next/
+out/
+.turbo/
+
+# ------------------------------
+# Testing
+# ------------------------------
+coverage/
+*.lcov
+
+# ------------------------------
+# Environment files
+# ------------------------------
+.env
+.env.*
+!.env.example
+
+# ------------------------------
+# Logs & Debug
+# ------------------------------
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ------------------------------
+# OS & Editor junk
+# ------------------------------
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.idea/
+.vscode/
+*.pem
+
+# ------------------------------
+# TypeScript
+# ------------------------------
+*.tsbuildinfo
+next-env.d.ts
+
+# ------------------------------
+# Vercel
+# ------------------------------
+.vercel
+
+# ------------------------------
+# Docker
+# ------------------------------
+docker-data/
