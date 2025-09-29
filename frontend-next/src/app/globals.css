@@ -500,20 +500,6 @@ option {
   color: var(--text);
 }
 
-/* if the list is div-based not table-based – still good */
-.panel-inspect .voucher-row {
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 12px;
-}
-.panel-inspect .voucher-code {
-  color: var(--ok);
-  font-weight: 600;
-}
-.panel-inspect .voucher-id {
-  color: var(--text);
-}
-
 /* ===================================================
    FOOTER / RESPONSIVE
 =================================================== */
