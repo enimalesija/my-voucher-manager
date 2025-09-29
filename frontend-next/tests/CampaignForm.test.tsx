@@ -1,15 +1,22 @@
 import { render, screen, fireEvent } from "@testing-library/react";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import CampaignForm from "@/components/campaigns/CampaignForm";
 
-// tests for the CampaignForm component
 describe("CampaignForm", () => {
   it("validates required fields", () => {
     // fake callbacks so we can check if they are called
     const pushToast = vi.fn();
     const onCreated = vi.fn();
 
-    // renders the form with our fake props
-    render(<CampaignForm pushToast={pushToast} onCreated={onCreated} />);
+    // create a query client just for testing
+    const queryClient = new QueryClient();
+
+    // render with QueryClientProvider
+    render(
+      <QueryClientProvider client={queryClient}>
+        <CampaignForm pushToast={pushToast} onCreated={onCreated} />
+      </QueryClientProvider>
+    );
 
     // clicks the submit button without filling anything
     fireEvent.click(screen.getByRole("button", { name: /create campaign/i }));
